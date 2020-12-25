@@ -35,65 +35,113 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Design of Communication</h1>
+										<h1>IoT for Connected Cars</h1>
 									</header>
 
 									
 
-									<p>From the point of creating a booking to getting a refund, anxiety in present in the customer mind at every step of the journey. We took a design centric approach to tackle this problem.</p>
+									<p>How IoT can play a significant role in car rental business?</p>
                                     
                                   
 									<hr class="major" />
 
-									<h2>Customer Journey Map</h2>
+									<h2></h2>
 									
-									<span class="image main"><img src="zoomcar_communicationdesign.jpg" alt="" /></span>
+<!-- 									<span class="image main"><img src="zoomcar_communicationdesign.jpg" alt="" /></span> -->
 									
 					
 									<hr class="major" />
 
-									<h2>Purpose of Communication</h2>
-									<p>There is either information to consume or/and action to take at every step of the customer process. Information not provided clearly or untimely can lead to customer getting stressed. Customer stress can also happen from friction in user flow due to not being reminded of the action that has to be taken to proceed to the next step. In short, effective communication is critical in nailing the user experience (for many products). It also helps in setting a tone of the brand. For ex, Uber’s communications have a relaxed and minimalistic undertone, it helps in setting an image of poise and thoughtfulness.</p>
+									<h2>Business Continuity</h2>
+									<p>To scale up fast and profitably, Zoomcar had to move away from the manned model where we had fleet guys to manage Pickup and Dropoff of the cars to business supported by Technology.</p>
+									<p>There are majorly 3 things that we need to run our business</p> 
+									<p>*Access to the Car</p> 
+									<p>*Distance Travelled</p> 
+									<p>*Fuel Consumed/Refilled</p> 
+									<p>Pickup and Dropoff process was manual where customers were given keys by the Fleet guys and distance traveled and fuel level was added to the booking by looking at the Dashboard of the car. We wanted to automate this process.</p> 
+									
+
 
 									<hr class="major" />
 
-									<h2>Modes of Communication</h2>
-									<p>For online business conducted through an App, as it is our case, online communication is possible through Emails, SMS, and Push Notifications. Each medium has its own rules of function, its realm of effectiveness and its limitations.</p>
+									<h2>Subsystem Design</h2>
+									
+									<h3>Accessibility Subsystem</h3> 
+									<p>1. We tap into car door’s wiring and through a relay actuate the door unlock and lock command.</p>
+									<p>2. This system provides Keyless Entry to our customers. A user can walk to the car and using his/her mobile phone, unlock and lock the car by the tap of a button.</p>
+									<p>3. This use-case is mission critical, hence included Bluetooth along with GPRS to send the signal to the car.</p>
+									
+									<h3>Discovery Subsystem</h3> 
+									<p>1. This system includes a GPS module and taps into blinkers and horn of the car.</p>
+									<p>2. The GPS in the car will assist the user to navigate to the car. For last-mile directions, the user would be able to make the horn and blinkers turn on. This action is useful when finding the car in a parking lot with hundreds of other cars.</p>
+											
+									<h3>OBD-II Subsystem</h3> 
+									<p>1. Post-2009, all the cars sold in India have an OBD port, made mandatory by the government to track emissions.</p>
+									<p>2. Off-the-shelf OBD-II products are commonly available in the market. We wanted to use this to get data from the CAN bus and get Odometer and Fuel reading to close the customer bookings.</p>
+									
+						
+									<h3>Battery Health Monitoring Subsystem</h3> 
+									<p>1. We wanted to tap into the car battery to get the current health of the battery.</p>
+									<p>2. All the cars in Zoomcar fleet have identical 6-cell, 12V car battery. There are majorly three variables responsible for the health of the battery; Voltage, Current Draw, and Charge Left.</p>
+									<p>3. We wanted to get this data from the car battery to proactively manage battery breakdowns from happening.</p>
+						
+									
+									<h3>Key Detection Subsystem</h3> 
+									<p>1. We wanted to confirm the presence of the key inside the car.</p>
+									<p>2. We explored a Bluetooth keychain that will trigger a command when the key is not inside the car. The Bluetooth connection sends an RSSI value, this RSSI value can be used to tell the proximity of the key from the car.</p>
+									
+						
+									
+									<h3>Audio Subsystem</h3> 
+									<p>1. All car have OEM fitted stereo system and car speakers, we wanted to tap into these car speakers.</p>
+									<p>2. We wanted to give our device a master control, to be able to switch over the audio playing from the stereo subsystem.</p>
 
+						
 									
 									<hr class="major" />
 
-									<h2>Mockups and Actuals</h2>
-									<p>Email</p>
+									<h2>Hardware Blueprint</h2>
+									<span class="image"><img src="zoomcar_communicationdesign1.jpg" alt="" /></span>						
+									<hr class="major" />
+									
+
+									<h2>Communication Protocol</h2>
+									
+			
+									<p>*We wanted a software infrastructure that is scalable, handle a high number of small data packets, and is secure.</p>
+									<p>*MQTT is designed as a lightweight machine to machine messaging protocol, primarily used for IoT devices, optimized for high-latency or unreliable networks. A bad network is pretty frequent in our use-case since cars are moving entity with fluctuating signal. It is a publish-subscribe messaging protocol.</p>
+									<p>*We implemented MQTT QoS 1 protocol. Quality of Service (QoS) 1.0 ensured that a message is delivered at least once. We implemented TSL over the MQTT for added security.</p>
 									<span class="image"><img src="zoomcar_communicationdesign1.jpg" alt="" /></span>
-									<p></p>
-									<span class="image"><img src="zoomcar_communicationdesign2.jpg" alt="" /></span>
-									
-									<p>Push Notification</p>
-									<span class="image"><img src="zoomcar_communicationdesign3.jpg" alt="" /></span>
-									<p></p>
-									<span class="image"><img src="zoomcar_communicationdesign4.jpg" alt="" /></span>
-									
-									<p>SMS</p>
-									<span class="image"><img src="zoomcar_communicationdesign5.jpg" alt="" /></span>
 									
 									
-								
+									<h2>Hardware Testing</h2>
+									
+			
+									<p>*There are total 4 systems which are involved here, the Device, the Security Gateway, the Zoomcar Cloud, and Zoomcar App and Systems. Each progression in phase involved an addition of one more system.</p>
+									<span class="image"><img src="zoomcar_communicationdesign1.jpg" alt="" /></span>
+	
+									<h3>Isolation Testing</h3>
+									<p>1. We performed the device fitment in the car to ensure the working of physical actions like Unlock/Lock, Immobilization, Horn and Blinker Actuation, Audio Play, Key Detection.</p>
+									<p>2. All the messages were sent to the device using MQTT lens with no interaction with Security Gateway or Zoomcar Cloud.</p>
+									
+									<h3>System Integration Testing</h3>
+									<p>1. This stage involved interaction with Security Gateway and Zoomcar Cloud.</p>
+									<p>2. All the features were tested by simulating the production system. The device was assigned to a car, and booking context flowed down to the car.</p>
+	
+									<h3>User Acceptance Testing</h3>
+									<p>1. We went live with 5 devices serving actual bookings. We are expecting the UAT to run for 1 month.</p>
+									<p>2. The target for UAT is to judge the performance of the device. This is a crucial step before releasing the Purchase Order for devices in bulk.</p>
+									<p>3. Performance evaluation for UAT is done by measuring Device Uptime, Connectivity Uptime, Lock/Unlock Success, Message Acknowledgment%, Message Delivery Rate.</p>
+									
+									<span class="image"><img src="zoomcar_communicationdesign1.jpg" alt="" /></span>
+									
+									<h2>Tools and Links</h2>
+									<p>1. Testing: MQTT Lens. Effective for publishing and subcribing to current data stream. https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en</p>
+									<p>2. BLE Testing: https://play.google.com/store/apps/details?id=uk.co.alt236.btlescan</p>
+									<p>3. Hacking the Car: This is a helpful book to understand the electronics of the car. http://opengarages.org/handbook/ebook/</p>
+					
 									<hr class="major" />
-
-									<h2>KPIs for Communication</h2>
-									<p>*Increase in open rate</p>
-									<p>*Increase in clicks on CTAs</p>
-									<p>*Reduction in calls for Q/A</p>
-								
-									<hr class="major" />
-
-									<h2>Tools Used</h2>
-									<p>*Balsamiq for Mockups</p>
-									<p>*Sketch for Exportable Design</p
-									
-									<hr class="major" />
-									<p>PS: Communications Revamp was the project that I undertook while working as a Product Manager for Zoomcar. Above mentioned communication is covering one of the scenarios, other scenarios were made following the template mentioned above.</p> 
+									<p>PS: PS: I have played the role of a Product Manager, this has been a 1-year long project involving numerous stakeholders from Designers, Embedded System Experts, Backend and Platform Developers, Quality Assurance Engineers.</p> 
 
 								</section>
 
