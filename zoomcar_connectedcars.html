@@ -43,11 +43,11 @@
 									<p>How IoT can play a significant role in car rental business?</p>
                                     
                                   
-									<hr class="major" />
+<!-- 									<hr class="major" /> -->
 
 									<h2></h2>
 									
-									<span class="image main"><img src="zoomcar_connectedcars.jpg" alt="" /></span>
+									<span class="image"><img src="zoomcar_connectedcars.jpg" alt="" /></span>
 									
 					
 									<hr class="major" />
@@ -65,7 +65,7 @@
 									<hr class="major" />
 
 									<h2>Subsystem Design</h2>
-									<span class="image main"><img src="zoomcar_connectedcars1.jpg" alt="" /></span>
+									<span class="image"><img src="zoomcar_connectedcars1.jpg" alt="" /></span>
 																		
 									<h3>Accessibility Subsystem</h3> 
 									<p>1. We tap into car door’s wiring and through a relay actuate the door unlock and lock command.</p>
@@ -77,7 +77,7 @@
 									<p>2. The GPS in the car will assist the user to navigate to the car. For last-mile directions, the user would be able to make the horn and blinkers turn on. This action is useful when finding the car in a parking lot with hundreds of other cars.</p>
 											
 									<h3>OBD-II Subsystem</h3> 
-									<span class="image main"><img src="zoomcar_connectedcars2.jpg" alt="" /></span>
+									<span class="image"><img src="zoomcar_connectedcars2.jpg" alt="" /></span>
 									
 																		
 									<p>1. Post-2009, all the cars sold in India have an OBD port, made mandatory by the government to track emissions.</p>
@@ -91,7 +91,7 @@
 						
 									
 									<h3>Key Detection Subsystem</h3> 
-									<span class="image main"><img src="zoomcar_connectedcars3.jpg" alt="" /></span>
+									<span class="image"><img src="zoomcar_connectedcars3.jpg" alt="" /></span>
 									
 									<p>1. We wanted to confirm the presence of the key inside the car.</p>
 									<p>2. We explored a Bluetooth keychain that will trigger a command when the key is not inside the car. The Bluetooth connection sends an RSSI value, this RSSI value can be used to tell the proximity of the key from the car.</p>
@@ -119,13 +119,16 @@
 									<p>*We implemented MQTT QoS 1 protocol. Quality of Service (QoS) 1.0 ensured that a message is delivered at least once. We implemented TSL over the MQTT for added security.</p>
 									<span class="image"><img src="zoomcar_connectedcars5.jpg" alt="" /></span>
 									
+									<hr class="major" />
+									
 									
 									<h2>Hardware Testing</h2>
 									
 			
 									<p>*There are total 4 systems which are involved here, the Device, the Security Gateway, the Zoomcar Cloud, and Zoomcar App and Systems. Each progression in phase involved an addition of one more system.</p>
 									<span class="image"><img src="zoomcar_connectedcars6.jpg" alt="" /></span>
-	
+									
+									<p></p> 
 									<h3>Isolation Testing</h3>
 									<p>1. We performed the device fitment in the car to ensure the working of physical actions like Unlock/Lock, Immobilization, Horn and Blinker Actuation, Audio Play, Key Detection.</p>
 									<p>2. All the messages were sent to the device using MQTT lens with no interaction with Security Gateway or Zoomcar Cloud.</p>
@@ -141,6 +144,7 @@
 									
 									<span class="image"><img src="zoomcar_connectedcars7.jpg" alt="" /></span>
 									
+									<p></p> 
 									<h2>Tools and Links</h2>
 									<p>1. Testing: MQTT Lens. Effective for publishing and subcribing to current data stream. https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en</p>
 									<p>2. BLE Testing: https://play.google.com/store/apps/details?id=uk.co.alt236.btlescan</p>
