@@ -47,7 +47,7 @@
 
 									<h2></h2>
 									
-<!-- 									<span class="image main"><img src="zoomcar_communicationdesign.jpg" alt="" /></span> -->
+									<span class="image main"><img src="zoomcar_connectedcars.jpg" alt="" /></span>
 									
 					
 									<hr class="major" />
@@ -65,7 +65,8 @@
 									<hr class="major" />
 
 									<h2>Subsystem Design</h2>
-									
+									<span class="image main"><img src="zoomcar_connectedcars1.jpg" alt="" /></span>
+																		
 									<h3>Accessibility Subsystem</h3> 
 									<p>1. We tap into car door’s wiring and through a relay actuate the door unlock and lock command.</p>
 									<p>2. This system provides Keyless Entry to our customers. A user can walk to the car and using his/her mobile phone, unlock and lock the car by the tap of a button.</p>
@@ -76,6 +77,9 @@
 									<p>2. The GPS in the car will assist the user to navigate to the car. For last-mile directions, the user would be able to make the horn and blinkers turn on. This action is useful when finding the car in a parking lot with hundreds of other cars.</p>
 											
 									<h3>OBD-II Subsystem</h3> 
+									<span class="image main"><img src="zoomcar_connectedcars2.jpg" alt="" /></span>
+									
+																		
 									<p>1. Post-2009, all the cars sold in India have an OBD port, made mandatory by the government to track emissions.</p>
 									<p>2. Off-the-shelf OBD-II products are commonly available in the market. We wanted to use this to get data from the CAN bus and get Odometer and Fuel reading to close the customer bookings.</p>
 									
@@ -87,6 +91,8 @@
 						
 									
 									<h3>Key Detection Subsystem</h3> 
+									<span class="image main"><img src="zoomcar_connectedcars3.jpg" alt="" /></span>
+									
 									<p>1. We wanted to confirm the presence of the key inside the car.</p>
 									<p>2. We explored a Bluetooth keychain that will trigger a command when the key is not inside the car. The Bluetooth connection sends an RSSI value, this RSSI value can be used to tell the proximity of the key from the car.</p>
 									
@@ -101,7 +107,7 @@
 									<hr class="major" />
 
 									<h2>Hardware Blueprint</h2>
-									<span class="image"><img src="zoomcar_communicationdesign1.jpg" alt="" /></span>						
+									<span class="image"><img src="zoomcar_connectedcars4.jpg" alt="" /></span>						
 									<hr class="major" />
 									
 
@@ -111,14 +117,14 @@
 									<p>*We wanted a software infrastructure that is scalable, handle a high number of small data packets, and is secure.</p>
 									<p>*MQTT is designed as a lightweight machine to machine messaging protocol, primarily used for IoT devices, optimized for high-latency or unreliable networks. A bad network is pretty frequent in our use-case since cars are moving entity with fluctuating signal. It is a publish-subscribe messaging protocol.</p>
 									<p>*We implemented MQTT QoS 1 protocol. Quality of Service (QoS) 1.0 ensured that a message is delivered at least once. We implemented TSL over the MQTT for added security.</p>
-									<span class="image"><img src="zoomcar_communicationdesign1.jpg" alt="" /></span>
+									<span class="image"><img src="zoomcar_connectedcars5.jpg" alt="" /></span>
 									
 									
 									<h2>Hardware Testing</h2>
 									
 			
 									<p>*There are total 4 systems which are involved here, the Device, the Security Gateway, the Zoomcar Cloud, and Zoomcar App and Systems. Each progression in phase involved an addition of one more system.</p>
-									<span class="image"><img src="zoomcar_communicationdesign1.jpg" alt="" /></span>
+									<span class="image"><img src="zoomcar_connectedcars6.jpg" alt="" /></span>
 	
 									<h3>Isolation Testing</h3>
 									<p>1. We performed the device fitment in the car to ensure the working of physical actions like Unlock/Lock, Immobilization, Horn and Blinker Actuation, Audio Play, Key Detection.</p>
@@ -133,7 +139,7 @@
 									<p>2. The target for UAT is to judge the performance of the device. This is a crucial step before releasing the Purchase Order for devices in bulk.</p>
 									<p>3. Performance evaluation for UAT is done by measuring Device Uptime, Connectivity Uptime, Lock/Unlock Success, Message Acknowledgment%, Message Delivery Rate.</p>
 									
-									<span class="image"><img src="zoomcar_communicationdesign1.jpg" alt="" /></span>
+									<span class="image"><img src="zoomcar_connectedcars7.jpg" alt="" /></span>
 									
 									<h2>Tools and Links</h2>
 									<p>1. Testing: MQTT Lens. Effective for publishing and subcribing to current data stream. https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en</p>
