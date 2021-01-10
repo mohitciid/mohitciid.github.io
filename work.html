@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
+
+<!-- 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+ -->
 <html>
 	<head>
-		<title>All: Projects</title>
+		<title></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="main.css" />
@@ -22,175 +22,146 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="" class="logo"><strong>All</strong> Projects</a>
-<!-- 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+<!-- 									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a> -->
+									<ul class="icons">
+									
+									
 										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul> -->
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> 
+
+									</ul>
 								</header>
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-<!-- 										<h1>Amazon Alexa inside Rental Cars</h1> -->
-									</header>
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Hey, I’m Mohit<br />
+											</h1>
+										</header>	
+											<p>I believe in the power of combining design and technology for solving critical problems, uplifting the standard of living, and for pleasure. I graduated from the Indian Institute of Technology, Guwahati in 2013 with a Bachelors in Chemical Sciences.<br /> </p>
+											<p> I love to travel on my motorbike, take week-long hikes, and talk about coffee. In 2018, I co-founded a coffee company with my brother. <br /> </p>
+											<p> I currently live in Costa Rica studying Interaction Design at CIID. </p> 
 
-									
-
-									<p>This page coming soon.</p>
-                                    
-                                  
-<!-- 									<span class="image"><img src="zoomcar_alexa.jpg" alt="" /></span> -->
-									
-					
-<!-- 									<hr class="major" />
-
-									<h2>The Interaction</h2>
-									<p>Just 2 hours before the booking, the user gets an SMS and an email which says that the car allocated to them is Alexa-enabled.</p>
-									<p>When they are physically in front of the car: They see a sticker ‘Alexa-enabled’ on the windshield of the car. They also find a specialized 
-										mentioning ‘Alexa-enabled’. By this time, we have already gotten their attention or in some cases, curiosity.</p>
-									<p>After booking the car, the user will unlock the car, inspect it, and as soon as put the key in the ignition fob, Echo Dot stuck on the dashboard starts to boot up. It takes about a min to do, it will automatically latch onto the wifi inside the car (we added a wifi hotspot inside the car) and is ready to work as it is already configured to the Zoomcar account.</p>
-
-									
-									<hr class="major" />
-
-									<h2>The many use-cases of Alexa</h2>
-									<span class="image"><img src="zoomcar_alexa1.jpg" alt="" /></span>									
-									<p> </p>
-
-									
-
-
-									<h3>Alexa ecosystem</h3>
-									<p>1. They can play Music.</p> 
-									<p>Alexa, play Skyfall</p>
-									
-									<p>1. 2. They can engage in a Game.</p> 
-									<p>Alexa, open Magic Door</p>
-									
-									<p>3. They can ask about Weather</p> 
-									<p>Alexa, what is the weather like in Bangalore?</p>
-
-									<p>4. Or just ask random questions</p> 
-									<p>Alexa, tell me more about April Fool’s day.</p>
-									<p>Alexa, who is Donald Trump?</p>
-									
-									
-									<span class="image"><img src="zoomcar_alexa2.jpg" alt="" /></span>
-								
-									<hr class="major" />
-
-									
-									<h3>Zoomcar Ecosystem</h3>
-								
-									<p>We want Alexa to replace App and IVR for the queries and actions users perform while they are using the car.</p> 
-									
-									<p>1. They can ask questions about their booking.</p> 
-									<p>Alexa, ask Zoomcar what is my remaining time?</p>
-									<p>Alexa, ask Zoomcar what is my dropoff location?</p>
-					
-									
-									<p>2. Booking related actions</p> 
-									<p>Alexa, ask Zoomcar to shorten my booking?</p>
-									<p>Alexa, ask Zoomcar to extend my booking?</p>
-									<p>Alexa, ask Zoomcar to contact me.</p>
-									
-									
-									<p>3. Users can ask for items on the Map</p> 
-									<p>Alexa, ask Zoomcar for the nearest gas station.</p>
-									<p>Alexa, ask Zoomcar for the nearest restaurant?</p>									
-									<p>Alexa, ask Zoomcar how far is Bangalore?</p>									
-
-									<hr class="major" />
-									
-									<h2>Zoomcar Skill Development</h2>
-									<h3>Contextualization</h3>
-								
-									<p>When user from an Alexa-enabled car interacts with Zoomcar skill, our skill should be able to identify the user from the active booking. Which in turn will be done by identifying device to car to active booking mapping.</p>
-									<span class="image"><img src="zoomcar_alexa3.jpg" alt="" /></span>
-									<p></p>
-									
-									<h3>Intent to Utterance Mapping</h3>									
-									<p>A skill (can be understood as an App) have many intents (functions) that are invoked by utterances (Voice trigger by the user), these intents are supported by slots (parameters in functions).</p>									
-									<p>“Alexa, ask Zoomcar to extend my booking by 2 hours”</p>
-									<p>‘Zoomcar’ is the skill which is to be invoked.</p>
-									<p>‘Extend my booking’ is the utterance which invokes the ‘Extend Booking’ intent.</p>
-									<p>And ‘2 hours’ is the slot for this intent, this is the required parameter for completing the action for ‘Extend Booking’ intent.</p>									
-									
-									<h3>Queries</h3>			
-									<p>Developing queries were easy for the skill. As they involved a direct response for each intent. The interaction with our backend system was one-way.</p>									
-									<p>Alexa, open Zoomcar</p> 
-									<p>Alexa, ask Zoomcar what is my remaining time?</p> 
-									<p>Alexa, ask Zoomcar what is my dropoff location?</p> 
-									
-									<h3>Main Features</h3>		
-									<p>1. Extension of Booking Time</p> 
-									<p>Through Alexa, users would be able to perform extension ≤ 4 hours (4 hours in total). We won’t be taking any payment over Alexa as of now and would be treating this by creating an outstanding. If the extension is asked for more than 4 hours, the user is directed to Zoomcar App to perform it.</p> 
-									<span class="image"><img src="zoomcar_alexa4.jpg" alt="" /></span>
-									
-									<p>2. Contacting the Call Centre</p> 
-									<p>Through Alexa, users would be able to reach CEC without waiting on the queue. User will ask for a callback, we will ticket a create for the same in the IVR. Our CEC agents would reach the user on his/her registered mobile number.</p> 
-									<span class="image"><img src="zoomcar_alexa5.jpg" alt="" /></span>
-
-									<p>3. Map Search</p> 
-									<p>While driving a car, the ability for searching for a petrol bunk, restaurant or an ATM might be useful to the customer. We have the user’s current location from a GPS device inside every car.</p>
-									<p>User asks Alexa for the nearest petrol pump/ATM/etc, Alexa replies back with the name of the nearest ‘place’ with the distance and approximate time taken. Through backend we also send across the link of the ‘place’ via SMS to the mobile phone. Without, Alexa voice service, the functionality of notification isn’t available and thus no way to give step by step feedback to the user.</p> 
-									<p>Result filtering for Petrol Pump, ATM and Pharmacy:</p> 
-									<p>Precedence will only be based on distance.</p> 
-									<p>Only ‘Open Now’ results should be delivered to the user.</p> 
-									
-									<p>Result filtering for restaurants:</p> 
-									<p>A little more critical since restaurant experience varies a lot and the closest one might not be the best experience.</p> 
-									<p>Top 3 rated within 5 kms -> Else top results from 5–15 kms to fill the list for 3 places.</p> 
-									<p>Only ‘Open Now’ results should be delivered to the user.</p> 
-									
-									<hr class="major" />									
-									
-									<h2>Hardware Design</h2>		
-									<span class="image"><img src="zoomcar_alexa6.jpg" alt="" /></span>
-
-									<h3>The Arrangement</h3>		
-									<p>Car battery provides charging to the Echo Dot, Wifi Hotspot, and Alexa hub when the car is in Ignition ON state. Echo Dot is harnessed on the dashboard of the car using a double-sided 3M tape, a power and aux cable runs into the Echo Dot. The power cable connects to the car battery and the AUX cable connects to the Alexa Hub.</p> 
-									
-									<h3>Audio Switching</h3>		
-									<p>Alexa Hub is for detecting the signal in Echo Dot, basis the presence of the signal it gives the master control to the Echo Dot. This implies if there is music playing from the ‘Entertainment System’ of the car into ‘Speaker System’ and the user triggers an audio input from Alexa, Echo Dot will take the master control and the audio from Echo Dot will instead start playing in the car speakers.</p>
-									<hr class="major" />
-									
-									
-									<h2>Offline Visibility</h2>		
-									<p>We wanted the user to know that there is a new device inside the car to nudge the user to use it. For this, we had a customised keychain, a pamphlet hanging by the rear-view mirror and a stick-on the headrest. The pamphlet and the stick-on contained utterances for some of the top use cases. We used the inspiration from the box of Amazon Echo Dot, took the use-cases relevant inside the car and added Zoomcar specific use-cases. We used ‘green’ font color for mentioning Zoomcar use-cases which goes in sync with Zoomcar’s brand color.</p>
-									
-									<h3>Keychain</h3>	
-									<span class="image"><img src="zoomcar_alexa7.jpg" alt="" /></span>
-									<span class="image"><img src="zoomcar_alexa8.jpg" alt="" /></span>
-									<p></p> 
-
-									<h3>Mirror Hanging</h3>	
-									<span class="image"><img src="zoomcar_alexa9.jpg" alt="" /></span>
-									<span class="image"><img src="zoomcar_alexa10.jpg" alt="" /></span>
-									<p></p> 									
-									
-									<h3>Headrest Sticker (for rear seat passengers)</h3>	
-									<span class="image"><img src="zoomcar_alexa11.jpg" alt="" /></span>
-									<p></p> 
-									
-									<h2>Experiment Results</h2>		
-									<span class="image"><img src="zoomcar_alexa12.jpg" alt="" /></span>
-									<hr class="major" />
-									
-									<p>PS: I was the Product Manager who led the experiment for Alexa integration in Zoomcar. Irrespective of getting positive results from it, we didn’t launch the Product from the experiment because of the high implementation cost.</p>
-									
-									
-									
-								
+										<p></p>
+<!-- 										<ul class="actions">
+											<li><a href="https://drive.google.com/file/d/1LM81x1nre7HJm9mShD27QNIloLUiK3Si/view?usp=sharing" class="button big">My Resume</a></li>
+										</ul> -->
+									</div>
+									<span class="image object">
+										<img src="pic10.jpg" alt="" />
+									</span>
 								</section>
 
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>About Me</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon fa-gem"></span>
+											<div class="content">
+												<h3>Product Management (2016 - 2019) </h3>
+												<p>3 years of experience across Online Customer Experience and Internet of Things.</p>  
+												<a href="https://zoomcar.com/">(www.zoomcar.com)</a>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-paper-plane"></span>
+											<div class="content">
+												<h3>Data Analytics (2013 - 2016) </h3>
+												<p>3 years of experience working for Microsoft Azure (from Mu Sigma) and Data Science Team at Zoomcar.</p> 
+												<a href="https://mu-sigma.com/">(www.mu-sigma.com)</a>
+												
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-rocket"></span>
+											<div class="content">
+												<h3>Interaction Design (2020 - 2021)</h3>
+												<p>Studying IxD from Copenhagen Institute of Interaction Design. </p> 
+												<a href="http://ciid.dk/education/students-2020/mohit-choudhary//">(www.ciid.dk)</a>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-signal"></span>
+											<div class="content">
+												<h3>Entrepreneurship (2018 - Ongoing)</h3>
+												<p>Co-founded a Coffee Company in India in 2019. </p> 
+												<a href="https://alchemistroastery.com/">(www.alchemistroastery.com)</a></p>
+											</div>
+										</article>
+									</div>
+								</section>
+
+							<!-- Section -->
+							<section>
+									<header class="major">
+										<h2>Featured Projects</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<a href="zoomcar_apprevamp.html" class="image"><img src="zoomcar_apprevamp.jpg" alt="" /></a>
+											<h3>Design and Data-Driven Approach to App Revamp</h3>
+											<p>36 experiments over 2 months and 3,500,000 data points to decide the best design for achieving the highest conversion rate, while increasing the visibility of side-products and features.</p>
+											<ul class="actions">
+<!-- 												<li><a href="zoomcar_apprevamp.html" class="button">More</a></li> -->
+											</ul>
+										</article>
+										<article>
+											<a href="zoomcar_caraccidents.html" class="image"><img src="zoomcar_caraccidents.jpg" alt="" /></a>
+											<h3>AI to reduce Car Accidents</h3>
+											<p>AI-Powered Camera Device to reduce accidents for a car rental company.</p>
+											<ul class="actions">
+<!-- 												<li><a href="zoomcar_caraccidents.html" class="button">More</a></li> -->
+											</ul>
+										</article>
+										<article>
+											<a href="zoomcar_communicationdesign.html" class="image"><img src="zoomcar_communicationdesign.jpg" alt="" /></a>
+											<h3>Design of Communication</h3>
+											<p>From the point of creating a booking to getting a refund, anxiety in present in the customer mind at every step of the journey. We took a design centric approach to tackle this problem.</p>
+											<ul class="actions">
+<!-- 												<li><a href="zoomcar_communicationdesign.html" class="button">More</a></li> -->
+											</ul>
+										</article>
+										<article>
+											<a href="zoomcar_connectedcars.html" class="image"><img src="zoomcar_connectedcars.jpg" alt="" /></a>
+											<h3>IoT for Connected Cars</h3>
+											<p>How IoT can play a significant role in car rental business?</p>
+											<ul class="actions">
+<!-- 												<li><a href="zoomcar_connectedcars.html" class="button">More</a></li> -->
+											</ul>
+										</article>
+										<article>
+											<a href="zoomcar_alexa.html" class="image"><img src="zoomcar_alexa.jpg" alt="" /></a>
+											<h3>Amazon Alexa inside Rental Cars</h3>
+											<p>Back in Jan-Mar ’18, we ran the much audacious effort of providing the luxury of Amazon Alexa to a rental car user. We learned much from the pilot. So very much.</p>
+											<ul class="actions">
+
+												<!-- 												<li><a href="zoomcar_alexa.html" class="button">More</a></li> -->
+											</ul>
+										</article>
+										<article>
+											<a href="entrepreneurship_burgernagar.html" class="image"><img src="entrepreneurship_burgernagar.jpg" alt="" /></a>
+											<h3>Burger Nagar: A Street-Food Stunt</h3>
+											<p>How opening a food-stall made us deeply venerate entrepreneurs?</p>
+											<ul class="actions">
+<!-- 												<li><a href="entrepreneurship_burgernagar.html" class="button">More</a></li> -->
+											</ul>
+										</article>
+										
+										
+									</div>
+								</section>   
+
 						</div>
-					</div>
- 				
+					</div> 
+
+			
+		
+					
 		<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
